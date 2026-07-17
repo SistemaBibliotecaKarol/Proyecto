@@ -1,1 +1,2 @@
-
+// Aquí agregaremos la lógica del inicio de sesión.
+console.log("Sistema de Biblioteca iniciado.");

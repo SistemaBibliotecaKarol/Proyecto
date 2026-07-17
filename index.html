@@ -3,94 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Biblioteca</title>
+    <title>Sistema de Gestión de Biblioteca</title>
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#f4f4f4;
-            margin:0;
-            padding:0;
-        }
-
-        header{
-            background:#0d6efd;
-            color:white;
-            text-align:center;
-            padding:25px;
-        }
-
-        section{
-            width:80%;
-            margin:30px auto;
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,.2);
-        }
-
-        h2{
-            color:#0d6efd;
-        }
-
-        ul{
-            line-height:2;
-        }
-
-        footer{
-            background:#222;
-            color:white;
-            text-align:center;
-            padding:15px;
-            margin-top:30px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Sistema de Gestión de Biblioteca</h1>
-    <p>Proyecto desarrollado en Python</p>
-</header>
+<div class="login">
 
-<section>
+    <h1>SISTEMA DE GESTIÓN DE BIBLIOTECA</h1>
 
-<h2>Descripción</h2>
+    <form action="libros.html">
 
-<p>
-Este proyecto permite administrar una biblioteca mediante programación orientada a objetos.
-Incluye el registro de libros, estudiantes y docentes, además del almacenamiento de información
-en una base de datos SQLite.
-</p>
+        <label>Usuario</label>
+        <input type="text" placeholder="Ingrese su usuario" required>
 
-<h2>Funcionalidades</h2>
+        <label>Contraseña</label>
+        <input type="password" placeholder="Ingrese su contraseña" required>
 
-<ul>
-    <li>Registro de libros.</li>
-    <li>Registro de estudiantes.</li>
-    <li>Registro de docentes.</li>
-    <li>Lista enlazada para almacenar libros.</li>
-    <li>Ordenamiento por título.</li>
-    <li>Almacenamiento de datos en SQLite.</li>
-    <li>Consulta de libros registrados.</li>
-</ul>
+        <button type="submit">Iniciar Sesión</button>
 
-<h2>Tecnologías utilizadas</h2>
+        <button type="button" onclick="window.location='registro.html'">
+            Registrarse
+        </button>
 
-<ul>
-    <li>Python</li>
-    <li>Programación Orientada a Objetos</li>
-    <li>SQLite</li>
-    <li>GitHub</li>
-    <li>GitHub Pages</li>
-</ul>
+    </form>
 
-</section>
+</div>
 
-<footer>
-Proyecto Sistema de Biblioteca © 2026
-</footer>
+<script src="js/login.js"></script>
 
 </body>
 </html>

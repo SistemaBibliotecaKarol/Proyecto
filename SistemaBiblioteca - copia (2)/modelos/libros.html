@@ -1,62 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Libros</title>
+function registrarLibro() {
 
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+    let titulo = document.getElementById("titulo").value;
+    let autor = document.getElementById("autor").value;
+    let categoria = document.getElementById("categoria").value;
+    let editorial = document.getElementById("editorial").value;
+    let disponible = document.getElementById("disponible").checked ? "Sí" : "No";
 
-<div class="contenedor">
+    if(titulo=="" || autor=="" || categoria=="" || editorial==""){
+        alert("Complete todos los campos");
+        return;
+    }
 
-    <h1>SISTEMA DE GESTIÓN DE BIBLIOTECA</h1>
+    let tabla = document.getElementById("tablaLibros").getElementsByTagName("tbody")[0];
 
-    <div class="formulario">
+    let fila = tabla.insertRow();
 
-        <label>Título</label>
-        <input type="text" id="titulo">
+    fila.insertCell(0).innerHTML = titulo;
+    fila.insertCell(1).innerHTML = autor;
+    fila.insertCell(2).innerHTML = categoria;
+    fila.insertCell(3).innerHTML = editorial;
+    fila.insertCell(4).innerHTML = disponible;
 
-        <label>Autor</label>
-        <input type="text" id="autor">
+    document.getElementById("titulo").value="";
+    document.getElementById("autor").value="";
+    document.getElementById("categoria").value="";
+    document.getElementById("editorial").value="";
+    document.getElementById("disponible").checked=false;
 
-        <label>Categoría</label>
-        <input type="text" id="categoria">
-
-        <label>Editorial</label>
-        <input type="text" id="editorial">
-
-        <label>
-            <input type="checkbox" id="disponible">
-            Disponible
-        </label>
-
-        <button onclick="registrarLibro()">Registrar Libro</button>
-
-    </div>
-
-    <h2>Libros registrados</h2>
-
-    <table id="tablaLibros" border="1">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Categoría</th>
-                <th>Editorial</th>
-                <th>Disponible</th>
-            </tr>
-        </thead>
-
-        <tbody>
-
-        </tbody>
-    </table>
-
-</div>
-
-<script src="js/libros.js"></script>
-
-</body>
-</html>
+    alert("Libro registrado correctamente");
+}
